@@ -1,0 +1,15 @@
+.itemCount{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemCount .btnContador{
+    background-color: gray;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}

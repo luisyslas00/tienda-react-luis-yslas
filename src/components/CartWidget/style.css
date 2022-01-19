@@ -1,0 +1,20 @@
+.botonCarrito{
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.botonCarrito img{
+    width: auto;
+    height: 100%;
+}
+
+.botonCarrito p{
+    color: black;
+}
