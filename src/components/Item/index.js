@@ -7,7 +7,7 @@ import "../Item/style.css"
             <p className="productContainer__nombre">{product.nombre}</p>
             <img src={product.imagen}/>
             <p className="productContainer__precio">Precio: ${product.precio}</p>
-            <p className="productContainer__detalles">{product.detalles}</p>
+          
             <ItemCount/>
             <button onClick={product.id} className="productContainer__btn">Agregar Al Carrito</button>
         </div>
