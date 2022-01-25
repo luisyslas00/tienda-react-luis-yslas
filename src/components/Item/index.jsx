@@ -1,5 +1,4 @@
-import ItemCount from "../ItemCount/index.js";
-import "../Item/style.css"
+import "./style.css"
 
  const Item = ({product})=>{
     return(
@@ -7,9 +6,7 @@ import "../Item/style.css"
             <p className="productContainer__nombre">{product.nombre}</p>
             <img src={product.imagen}/>
             <p className="productContainer__precio">Precio: ${product.precio}</p>
-          
-            <ItemCount/>
-            <button onClick={product.id} className="productContainer__btn">Agregar Al Carrito</button>
+            <button onClick={product.id} className="productContainer__btn">Ver más</button>
         </div>
     )
  }

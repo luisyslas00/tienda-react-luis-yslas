@@ -1,5 +1,5 @@
-import ItemList from "../ItemList/index.js";
-import "../ItemListContainer/style.css"
+import ItemList from "../ItemList";
+import "./style.css"
 
 function ItemListContainer(){
     return(

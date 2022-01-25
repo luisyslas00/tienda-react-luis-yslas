@@ -1,5 +1,5 @@
 import React from "react";
-import "../ItemCount/style.css";
+import "./style.css";
 
 function ItemCount(){
     const [contador,setContador] = React.useState(0);

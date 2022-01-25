@@ -1,15 +1,21 @@
-import ItemDetails from "./components/ItemDetail/index.js";
-import ItemDetailsContainer from "./components/ItemDetail/ItemDetails.js";
-import ItemListContainer from "./components/ItemListContainer/index.js";
-import Navbar from "./components/Navbar/index.js";
+import './App.css';
+import { BrowserRouter , Route , Routes } from "react-router-dom"
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar/>
-      <ItemListContainer/>
-      <ItemDetailsContainer/>
-    </div>
+      <Routes>
+        <Route path="/"/>
+          <Route index element={<HomePage/>} />
+          <Route path="about" element={<AboutPage/>}/>
+        <Route/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
