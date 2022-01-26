@@ -12,14 +12,14 @@
             "nombre":"Moto E40", 
             "imagen":"./motoe40.png",
             "precio":21.499,
-            "detalles":"Procesador Octa-Core 1.6 GHz para que estés al día con todas las aplicaciones. " 
+            "detalles":"No te pierdas de un solo momento con el nuevo Motorola Moto E40. Con su cámara de 48+2+2 MP; sacá fotos nítidas y claras tanto de día como de noche. El Motorola Moto E40 posee un procesador Octa-Core 1.8 GHz para que disfrutes de todas tus aplicaciones sin inconvenientes. Memoria interna de 64 GB y expandible con una MicroSd hasta 256GB" 
         },
         {
             "id":3,
             "nombre":"Moto E7i Power", 
             "imagen":"./motoe7ipower.png", 
             "precio":29.999, 
-            "detalles":"Memoria interna de 64 GB y expandible con una MicroSd hasta 256GB."
+            "detalles":"No te pierdas de un solo momento con el nuevo Motorola Moto E7i Power. Con su cámara de 13+2 Mp; sacá fotos nítidas y claras tanto de día como de noche. El Motorola Moto E7i Power posee un procesador Octa-Core 1.6 GHz para que disfrutes de todas tus aplicaciones sin inconvenientes. Memoria interna de 32 GB y expandible con una MicroSd hasta 1TB"
         },
         {
             "id":4,
@@ -27,6 +27,34 @@
             "imagen":"./s21ultra5g.png", 
             "precio":204.499, 
             "detalles":"Memoria interna de 256 GB."
+        },
+        {
+            "id":5,
+            "nombre":"Samsung A22", 
+            "imagen":"./samsunga22.png", 
+            "precio":39.999, 
+            "detalles":"Te presentamos el Samsung Galaxy A22 con un procesador Octa-Core (2.0GHz, 1.8GHz) para que estés al día con todas las aplicaciones y juegos de última generación. Descubrí todas las posibilidades para tus foto, tanto de día como de noche, con la cámara de 48+8+2+2 Mp. Memoria interna de 128 GB y expandible con una MicroSd hasta 1TB."
+        },
+        {
+            "id":6,
+            "nombre":"Moto E6i", 
+            "imagen":"./motoe6i.png", 
+            "precio":19.499, 
+            "detalles":"Te presentamos el Motorola Moto E6i con un procesador Octa-Core 1.6 GHz para que estés al día con todas las aplicaciones y juegos de última generación. Descubrí todas las posibilidades para tus fotos, tanto de día como de noche, con la cámara de 13+2 Mp. Memoria interna de 32 GB y expandible con una MicroSd hasta 128GB."
+        },
+        {
+            "id":7,
+            "nombre":"Iphone SE 128GB", 
+            "imagen":"./iphonese128.png", 
+            "precio":99.999, 
+            "detalles":"Procesador A13 Bionic, almacenamiento de 128GB con cámaras frontal de 7MP y trasera de 12MP. Con un tamaño de pantalla de 4.7 pulgadas ."
+        },
+        {
+            "id":8,
+            "nombre":"Samsung A03S", 
+            "imagen":"./samsunga03s.png", 
+            "precio":26.999, 
+            "detalles":"Te presentamos el Samsung Galaxy A03s con un procesador Octa-Core (2.3GHz,1.8GHz) para que estés al día con todas las aplicaciones y juegos de última generación. Descubrí todas las posibilidades para tus foto, tanto de día como de noche, con la cámara de 13+2+2 Mp. Memoria interna de 64 GB y expandible con una MicroSd hasta 1TB."
         }
     ]
 }
