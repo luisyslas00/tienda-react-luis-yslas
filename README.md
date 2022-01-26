@@ -1,3 +1,7 @@
+# Proyecto Tienda Celular
+
+Estoy trabajando en un proyecto de tienda de celulares (ficticio), con sus diferentes páginas (Home, Nosotros, Productos, Contacto, Carrito, además le agregué una en caso de no ser encontrada "Not Found").
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
