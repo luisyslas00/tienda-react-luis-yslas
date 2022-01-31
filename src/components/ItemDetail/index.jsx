@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import ItemCount from "../ItemCount"
 import "../ItemDetail/style.css"
 import cargando from  "../../assets/cargando.gif";
@@ -8,7 +8,7 @@ const ItemDetails = () =>{
     const {productId}= useParams()
     const [product,setProduct] = useState()
     const [isLoading,setIsLoading] = useState(false)
-
+    const navigate = useNavigate()
     useEffect(() => {
         const URL = `http://localhost:3001/productos/${productId}`;
         setIsLoading(true);
@@ -29,7 +29,7 @@ const ItemDetails = () =>{
                         <p>{product.detalles}</p>
                         <p className="product__precio">Precio: ${product.precio}</p>
                         <ItemCount/>
-                        <button onClick={product.id} className="product__btn">Agregar Al Carrito</button>
+                        <button onClick={()=>navigate(`/cart`)} className="product__btn btnFinalizarCompra">Finalizar Compra</button>
                     </div>
                 </div>
             </div>

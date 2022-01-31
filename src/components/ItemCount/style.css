@@ -13,3 +13,9 @@
     height: 30px;
     cursor: pointer;
 }
+
+.itemCount .btnContador:active{
+    background-color: gray;
+    border: 1px solid white;
+    color: white;
+}

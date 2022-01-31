@@ -37,8 +37,21 @@
     cursor: pointer;
     border: 1px solid black;
     text-transform: uppercase;
+    margin: 10px 0;
 }
 
 .product__precio{
     font-size: 36px;
+}
+
+.btnAgregarAlCarrito:hover{
+    background-color: green;
+    color: white;
+    border: white 1px solid;
+}
+
+.btnFinalizarCompra:hover{
+    background-color: red;
+    color: white;
+    border: white 1px solid;
 }
