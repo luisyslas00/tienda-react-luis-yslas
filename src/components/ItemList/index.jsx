@@ -17,7 +17,6 @@ function ItemList(){
         .catch((err)=>setError(err))
         .finally(()=>setIsLoading(false))
     },[]);
-
     if(isLoading){
         return(
             <img src={cargando}/>
