@@ -6,9 +6,9 @@ import Navbar from './components/Navbar';
 import ProductsPage from './pages/ProductsPage';
 import ContactPage from './pages/ContactPage';
 import CartPage from './pages/CartPage';
-import ItemDetails from './components/ItemDetail';
 import NotFound from './pages/NotFound';
 import { CartProvider } from './context/cartContext';
+import ItemDetails from './components/ItemDetail';
 
 
 function App() {

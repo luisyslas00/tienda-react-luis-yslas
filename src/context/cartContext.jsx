@@ -1,33 +1,30 @@
 import { createContext, useContext, useState } from "react";
 
-
 export const CartContext = createContext([]);
 
 export const CartProvider = ({children}) => {
     const [cart,setCart] = useState([]);
    
-    const addItem = (item,quantity) => {
-        const newItem = { item, quantity};
-        console.log("Se agregó al carrito:", newItem)
-        setCart((prevState)=>[...prevState, newItem]);
-    };
+    const addItem = (item, quantity) => {
+        const newItem = { item, quantity };
+        console.log("Se agregó al carrito:", newItem);
+        setCart((prevState) => [...prevState, newItem]);
+      };
 
-    const hola = () => {
-        return console.log("hola")
-    }
-    
     const deleteItem = (id) => {
         setCart((prev)=>prev.filter((element)=>element.item.id===id));
     };  
      
     return(
-        <CartContext.Provider value={ cart, addItem , deleteItem, hola}>
+        <CartContext.Provider value={ cart, addItem , deleteItem}>
              {children}
         </CartContext.Provider>
     )
 } 
 
 export const useCart = () => useContext(CartContext);
+
+//Lo que había hecho antes dentro de CartProvider
 
 // const [productos,setProductos] = useState([]);
     // const [err,setError] = useState([]);
