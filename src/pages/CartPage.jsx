@@ -4,9 +4,6 @@ import { CartContext } from "../context/cartContext";
 const CartPage = () => {
     const {cart ,deleteItem,clearAll} = useContext(CartContext);
 
-    //Para sumar el precio de todos los productos
-    const [precioTotal,setPrecioTotal] = useState(0)
-
     // setPrecioTotal((precioTotal) => [...precioTotal, totalPrecioProducto]);
 
         return(
@@ -22,10 +19,10 @@ const CartPage = () => {
                             <p>Cantidad: {compra.quantity}</p>
                             <p>${totalPrecioProducto}</p>
                             <button onClick={()=>deleteItem(compra.item.id)}>Eliminar</button>
-                            <p></p>
                         </div>
                     )
                 })}
+                <p></p>
                 <button onClick={()=>clearAll()}>Vaciar Carrito</button>
             </>
         )

@@ -5,34 +5,20 @@ export const CartContext = createContext([]);
 export const CartProvider = ({children}) => {
     const [cart,setCart] = useState([]);
     
-
     const addItem = (item, quantity) => {
         const newItem = { item, quantity };
-        setCart((prevState) => [...prevState, newItem]);
-    //     if(cart.includes(newItem.item.id)){
-    //         console.log('Ya está en el carrito')
-    //     }else{           
-    //         console.log('Se agregó al carrito')
-    //     }
-    
-        //Acceso al ID
-        // console.log(newItem.item.id)
+        const isIncart = cart.some((product) => product.id === newItem.id);
+        if(!isIncart){
+            setCart((prevState) => [...prevState, newItem]);
+            console.log("Añadido al carrito")
+        }else{
+            console.log("Ya está en el carrito")
+        }
     };
 
-    //Otro intento función addItem
-    // const addItem = (item,quantity) => {
-    //     const newItem = { item, quantity };
-    //     setCart((prev) => {
-    //      const IsInACart = prev.find((i) => i.id === item.id);
-    //       if (IsInACart) {
-    //         return console.log("Ya está agregado")
-    //       }
-    //       return [...prev, newItem];
-    //     });
-    // };
-
-    // const IsInACart = (id) => {
-    //     const productos = cart.filter((producto) => producto.id === id);
+    //PrecioTotal
+    // const totalPurchase = () =>{
+    //     return cart.reduce ((contador, product)=> contador+ product.price * product.quantity, 0)
     // }
 
     const deleteItem = (id) => {
@@ -42,9 +28,12 @@ export const CartProvider = ({children}) => {
     const clearAll = () => {
         setCart([]);
     };
-    
+    const totalQty = () => {      
+        return cart.reduce((contador,product) =>  contador +  product.quantity, 0 ) 
+    }
+
     return(
-        <CartContext.Provider value={{cart, addItem , deleteItem, clearAll} }>
+        <CartContext.Provider value={{cart, addItem , deleteItem, clearAll, totalQty} }>
              {children}
         </CartContext.Provider>
     )
@@ -67,16 +56,3 @@ export const useCart = () => useContext(CartContext);
     //     .catch((err)=>setError(err))
     //     .finally(()=>setIsLoading(false))
     // },[]);
-   
-    // const agregarAlCarrito = (id)=>{
-        // const producto = cart.filter((producto) => producto.id === id)
-        // setCart((prevState)=>([...prevState, {item,quantity}]));
-    // }
- // const agregarAlCarrito = (id) => {
-    //     const producto = productos.filter((producto) => producto.id === id);
-    //     setCart([...cart, ...producto]);
-    // };
-  // const delItem = (id) => {
-    //     const productos = cart.filter((producto) => producto.id !== id);
-    //     setCart(productos);
-    // };  
