@@ -7,7 +7,7 @@ export const CartProvider = ({children}) => {
     
     const addItem = (item, quantity) => {
         const newItem = { item, quantity };
-        const isIncart = cart.some((product) => product.id === newItem.id);
+        const isIncart = cart.find((product) => product.id === newItem.id);
         if(!isIncart){
             setCart((prevState) => [...prevState, newItem]);
             console.log("Añadido al carrito")
@@ -19,6 +19,14 @@ export const CartProvider = ({children}) => {
     //PrecioTotal
     // const totalPurchase = () =>{
     //     return cart.reduce ((contador, product)=> contador+ product.price * product.quantity, 0)
+    // }
+    // const totalPurchase = () => {
+    //     let total = 0;
+    //     cart.forEach(element => {
+    //         let subTotal = element.quantity * element.item.price;
+    //         total = total + subTotal;
+    //     });
+    //     return total;
     // }
 
     const deleteItem = (id) => {
