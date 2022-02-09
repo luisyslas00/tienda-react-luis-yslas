@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import ItemCount from "../ItemCount"
 import "../ItemDetail/style.css"
@@ -6,7 +6,6 @@ import cargando from  "../../assets/cargando.gif";
 import { CartContext, useCart } from "../../context/cartContext"
 
 const ItemDetails = () =>{
-    const {IsInACart} = useContext(CartContext);
     const {addItem}= useCart()
     const [contador,setContador] = useState(0);
     const {productId}= useParams()
@@ -34,8 +33,7 @@ const ItemDetails = () =>{
                         <p>{product.detalles}</p>
                         <p className="product__precio">Precio: ${product.precio}</p>
                         <ItemCount contador={contador} setContador={setContador}/>
-                        {!IsInACart ? <p>ProductoAgregado</p>:<button onClick={() =>addItem(product,contador)} className="product__btn btnAgregarAlCarrito">Agregar Al Carrito</button>}
-                        
+                        <button onClick={() =>addItem(product,contador)} className="product__btn btnAgregarAlCarrito">Agregar Al Carrito</button>
                         <button onClick={()=>navigate(`/cart`)} className="product__btn btnFinalizarCompra">Finalizar Compra</button>
                     </div>
                 </div>

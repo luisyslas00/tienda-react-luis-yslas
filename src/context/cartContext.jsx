@@ -7,18 +7,17 @@ export const CartProvider = ({children}) => {
     
     const addItem = (item, quantity) => {
         const newItem = { item, quantity };
-        setCart((prevState) => [...prevState, newItem]);
-        // const isIncart = cart.find((item) => item.id === newItem.id);
-        // if(!isIncart){
-            
-        //     console.log("Añadido al carrito")
-        // }else{
-        //     console.log("Ya está en el carrito")
-        // }
+        const isIncart = cart.find((item) => item.id === newItem.id);
+        if(!isIncart){
+              setCart((prevState) => [...prevState, newItem]);
+            console.log("Añadido al carrito")
+        }else{
+            console.log("Ya está en el carrito")
+        }
     };
-    const IsInACart = (id) =>{
-        return cart.find((element) => element.item.id === id)
-    }
+    // const IsInACart = (id) =>{
+    //     console.log(cart.find((element) => element.item.id === id))
+    // }
     
     //PrecioTotal
     // const totalPurchase = () =>{
@@ -45,7 +44,7 @@ export const CartProvider = ({children}) => {
     }
 
     return(
-        <CartContext.Provider value={{cart, addItem , deleteItem, clearAll, totalQty,IsInACart} }>
+        <CartContext.Provider value={{cart, addItem , deleteItem, clearAll, totalQty} }>
              {children}
         </CartContext.Provider>
     )
