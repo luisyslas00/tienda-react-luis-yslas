@@ -2,8 +2,8 @@ import { useContext, useState } from "react";
 import { CartContext } from "../context/cartContext";
 
 const CartPage = () => {
-    const {cart ,deleteItem,clearAll} = useContext(CartContext);
-
+    const {cart ,deleteItem,clearAll,precioTotal} = useContext(CartContext);
+    console.log(cart)
         return(
             <>
                 <h1>Carrito</h1>
@@ -20,7 +20,7 @@ const CartPage = () => {
                         </div>
                     )
                 })}
-                <p></p>
+                <h3>Total: ${precioTotal()}</h3>
                 <button onClick={()=>clearAll()}>Vaciar Carrito</button>
             </>
         )

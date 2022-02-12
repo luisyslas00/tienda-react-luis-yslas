@@ -8,7 +8,6 @@ export const CartProvider = ({children}) => {
     const addItem = (item,quantity) =>{
         const newCart = {...item, cantidad: quantity,};
         const IsInCart = (idItem)=>{
-            //está en el carrito ? true : false
             return cart.some((prod)=>prod.id == idItem);
         }
         if(!IsInCart(item.id)){
@@ -24,7 +23,6 @@ export const CartProvider = ({children}) => {
             })
             setCart(newCarts);
         }
-        
     }
 
     const deleteItem = (id) => {
@@ -38,8 +36,16 @@ export const CartProvider = ({children}) => {
         return cart.reduce((contador,product) =>  contador +  product.cantidad, 0 ) 
     }
 
+    const precioTotal = () =>{
+        let total = 0;
+        cart.forEach((item)=>{
+            total += item.precio * item.cantidad
+            console.log(total)
+        })
+    }
+
     return(
-        <CartContext.Provider value={{cart, addItem , deleteItem, clearAll, totalQty} }>
+        <CartContext.Provider value={{cart, addItem , deleteItem, clearAll, totalQty, precioTotal} }>
              {children}
         </CartContext.Provider>
     )
