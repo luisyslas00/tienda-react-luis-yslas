@@ -4,21 +4,19 @@ import { CartContext } from "../context/cartContext";
 const CartPage = () => {
     const {cart ,deleteItem,clearAll} = useContext(CartContext);
 
-    // setPrecioTotal((precioTotal) => [...precioTotal, totalPrecioProducto]);
-
         return(
             <>
                 <h1>Carrito</h1>
                 {cart.length === 0 ? <h3>No Hay productos en el carrito</h3> :null}
                 {cart.map((compra)=>{
-                    const totalPrecioProducto = compra.item.precio*compra.quantity 
+                    const totalPrecioProducto = compra.precio*compra.cantidad 
                     return (
-                        <div  key={compra.item.id}>
-                            <p>Producto: {compra.item.nombre}</p>
-                            <p>${compra.item.precio}</p>
-                            <p>Cantidad: {compra.quantity}</p>
+                        <div  key={compra.id}>
+                            <p>Producto: {compra.nombre}</p>
+                            <p>${compra.precio}</p>
+                            <p>Cantidad: {compra.cantidad}</p>
                             <p>${totalPrecioProducto}</p>
-                            <button onClick={()=>deleteItem(compra.item.id)}>Eliminar</button>
+                            <button onClick={()=>deleteItem(compra.id)}>Eliminar</button>
                         </div>
                     )
                 })}

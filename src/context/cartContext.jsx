@@ -5,42 +5,37 @@ export const CartContext = createContext([]);
 export const CartProvider = ({children}) => {
     const [cart,setCart] = useState([]);
     
-    const addItem = (item, quantity) => {
-        const newItem = { item, quantity };
-        const isIncart = cart.find((item) => item.id === newItem.id);
-        if(!isIncart){
-              setCart((prevState) => [...prevState, newItem]);
-            console.log("Añadido al carrito")
-        }else{
-            console.log("Ya está en el carrito")
+    const addItem = (item,quantity) =>{
+        const newCart = {...item, cantidad: quantity,};
+        const IsInCart = (idItem)=>{
+            //está en el carrito ? true : false
+            return cart.some((prod)=>prod.id == idItem);
         }
-    };
-    // const IsInACart = (id) =>{
-    //     console.log(cart.find((element) => element.item.id === id))
-    // }
-    
-    //PrecioTotal
-    // const totalPurchase = () =>{
-    //     return cart.reduce ((contador, product)=> contador+ product.price * product.quantity, 0)
-    // }
-    // const totalPurchase = () => {
-    //     let total = 0;
-    //     cart.forEach(element => {
-    //         let subTotal = element.quantity * element.item.price;
-    //         total = total + subTotal;
-    //     });
-    //     return total;
-    // }
+        if(!IsInCart(item.id)){
+            setCart([...cart, newCart]);
+        }else{
+            const newCarts = cart.map((cartItem)=>{
+                const sumTotal = cartItem.cantidad + quantity;
+                if(cartItem.id === item.id){
+                    return {...cartItem,cantidad: sumTotal};
+                }else{
+                    return cartItem;
+                }
+            })
+            setCart(newCarts);
+        }
+        
+    }
 
     const deleteItem = (id) => {
-        setCart((prev)=>prev.filter((element)=>element.item.id!==id));
+        setCart((prev)=>prev.filter((element)=>element.id!==id));
     }; 
 
     const clearAll = () => {
         setCart([]);
     };
     const totalQty = () => {      
-        return cart.reduce((contador,product) =>  contador +  product.quantity, 0 ) 
+        return cart.reduce((contador,product) =>  contador +  product.cantidad, 0 ) 
     }
 
     return(
@@ -51,19 +46,3 @@ export const CartProvider = ({children}) => {
 } 
 
 export const useCart = () => useContext(CartContext);
-
-//Lo que había hecho antes dentro de CartProvider
-
-// const [productos,setProductos] = useState([]);
-    // const [err,setError] = useState([]);
-    // const [isLoading,setIsLoading] = useState([]);
-    // const JSONURL = "http://localhost:3001/productos"
-    
-    // useEffect(()=>{
-    //     setIsLoading(true);
-    //     fetch(JSONURL)
-    //     .then((response)=>response.json())
-    //     .then((json) => setProductos(json))
-    //     .catch((err)=>setError(err))
-    //     .finally(()=>setIsLoading(false))
-    // },[]);
