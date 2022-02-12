@@ -42,6 +42,7 @@ export const CartProvider = ({children}) => {
             total += item.precio * item.cantidad
             console.log(total)
         })
+        return total
     }
 
     return(
