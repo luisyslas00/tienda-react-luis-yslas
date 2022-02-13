@@ -9,6 +9,7 @@ import CartPage from './pages/CartPage';
 import NotFound from './pages/NotFound';
 import { CartProvider } from './context/cartContext';
 import ItemDetails from './components/ItemDetail';
+import CategoryPage from './pages/CategoryPage';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="cart" element={<CartPage/>}/>
           <Route/>
           <Route path='*' element={<NotFound/>}/>
+          <Route path="category/:categoryId" element={<CategoryPage/>}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>

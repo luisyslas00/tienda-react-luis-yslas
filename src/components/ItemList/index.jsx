@@ -1,8 +1,9 @@
 import cargando from "../../assets/cargando.gif"
 import { useEffect, useState } from "react";
 import Item from "../Item";
+import { getFirestore } from "../../firebase";
 
-const JSONURL = 'http://localhost:3001/productos';
+// const JSONURL = 'http://localhost:3001/productos';
 
 function ItemList(){
     const [products,setProducts] = useState([])
@@ -10,16 +11,41 @@ function ItemList(){
     const [error,setError]=useState(null)
 
     useEffect(()=>{
-        setIsLoading(true);
-        fetch(JSONURL)
-        .then((response)=>response.json())
-        .then((json) => setProducts(json))
-        .catch((err)=>setError(err))
-        .finally(()=>setIsLoading(false))
+        //Traemos la base de datos
+        const db = getFirestore()
+        //Apuntamos a la colección
+        const productosCollection = db.collection('productos')
+        //Usamos el método get a la collection
+        const getDataFromFirestore = async () =>{
+            setIsLoading(true)
+            try{
+            const response = await productosCollection.get()
+            //Vemos si está vacio
+            if(response.empty){
+                console.log("Está vacio")
+            }
+            setProducts(response.docs.map((doc)=>({...doc.data(), id: doc.id})))
+            }
+            catch{
+                setError(error);
+            }
+            finally{
+                setIsLoading(false)
+            }
+        }
+        getDataFromFirestore()
+        
+        //Fetch con el JSON 
+        // setIsLoading(true);
+        // fetch(JSONURL)
+        // .then((response)=>response.json())
+        // .then((json) => setProducts(json))
+        // .catch((err)=>setError(err))
+        // .finally(()=>setIsLoading(false))
     },[]);
     if(isLoading){
         return(
-            <img src={cargando}/>
+            <img className="imgCargando" src={cargando}/>
         )
     }else if(error){
         return(

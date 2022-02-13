@@ -55,3 +55,9 @@
     color: white;
     border: white 1px solid;
 }
+
+.imgCargando{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
