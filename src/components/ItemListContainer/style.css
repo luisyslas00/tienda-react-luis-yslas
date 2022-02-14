@@ -4,3 +4,32 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+@media  screen and (min-width: 768px) {
+    .categoryProducts{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .categoryProducts a{
+        height: 50px;
+        width: auto;
+        margin: 15px;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .categoryProducts a .todosCategory{
+        text-transform: uppercase;
+    }
+
+    .categoryProducts a .imgLogoMarca{
+        height: 100%;
+        width: auto;
+    }
+}

@@ -13,6 +13,7 @@ const CartPage = () => {
                     return (
                         <div  key={compra.id}>
                             <p>Producto: {compra.nombre}</p>
+                            <img src={compra.imagen} alt={compra.nombre}/>
                             <p>${compra.precio}</p>
                             <p>Cantidad: {compra.cantidad}</p>
                             <p>${totalPrecioProducto}</p>
