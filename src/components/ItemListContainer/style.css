@@ -32,4 +32,20 @@
         height: 100%;
         width: auto;
     }
+    .contenedorCarrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 15px;
+    }
+    .contenedorCarrito .contenedorItems{
+        width: 100%;
+        background-color: gray;
+        padding: 1em;
+    }
+    .contenedorCarrito .contenedorFormulario{
+        width: 100%;
+        background-color: lightblue;
+        padding: 1em;
+    }
 }
