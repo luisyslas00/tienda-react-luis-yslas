@@ -17,7 +17,6 @@
         height: 50px;
         width: auto;
         margin: 15px;
-        border: 1px solid black;
         padding: 5px;
         border-radius: 10px;
         text-decoration: none;
@@ -32,6 +31,7 @@
         height: 100%;
         width: auto;
     }
+    /*CARRITO*/
     .contenedorCarrito{
         display: flex;
         flex-direction: row;
@@ -40,12 +40,110 @@
     }
     .contenedorCarrito .contenedorItems{
         width: 100%;
-        background-color: gray;
         padding: 1em;
+        text-align: center;
     }
+    .contenedorCarrito .contenedorItems .contenedorProductoCarrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid lightblue;
+        color: black;
+        padding: 0.5em;
+    }
+    .contenedorCarrito .contenedorItems .contenedorProductoCarrito .btnEliminar{
+        border: none;
+        background-color: red;
+        color: white;
+        padding: 0.5em;
+        cursor: pointer;
+    }
+    .contenedorCarrito .contenedorItems .contenedorProductoCarrito .btnEliminar:active{
+        background-color: rgb(209, 3, 3);
+    }
+    .btnVaciar{
+        border: none;
+        background-color: red;
+        color: white;
+        padding: 0.5em;
+        cursor: pointer;
+    }
+    .btnVaciar:hover{
+        background-color: rgb(204, 0, 0);
+    }
+    .btnVaciar:active{
+        background-color: rgb(128, 1, 1);
+        color: white;
+    }
+    
     .contenedorCarrito .contenedorFormulario{
         width: 100%;
-        background-color: lightblue;
         padding: 1em;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario{
+        background-color: lightblue;
+        display: flex;
+        flex-direction: column;
+        padding: 1em; 
+    }
+    .contenedorCarrito .contenedorFormulario .formulario #name{
+        background-color: white;
+        border: 3px solid transparent;
+        line-height: 20px;
+        transition: .3s ease all;
+        padding: 3px;
+        border-radius: 5px;
+        margin-bottom: 1em;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario #name:focus{
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+        border: 3px solid lightblue;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario #mail{
+        background-color: white;
+        border: 3px solid transparent;
+        line-height: 20px;
+        transition: .3s ease all;
+        padding: 3px;
+        border-radius: 5px;
+        margin-bottom: 1em;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario #mail:focus{
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+        border: 3px solid lightblue;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario #phone{
+        background-color: white;
+        border: 3px solid transparent;
+        line-height: 20px;
+        transition: .3s ease all;
+        padding: 3px;
+        border-radius: 5px;
+        margin-bottom: 1em;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario #phone:focus{
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+        border: 3px solid lightblue;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario .btnEnviar{
+        background-color: rgb(135, 224, 0);
+        padding: 1em;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-transform: uppercase;
+        margin-top: 1em;
+        cursor: pointer;
+    }
+    .contenedorCarrito .contenedorFormulario .formulario .btnEnviar:hover{
+        background-color: rgb(91, 150, 3);
+    }
+    .contenedorCarrito .contenedorFormulario .formulario .btnEnviar:active{
+        background-color: rgb(105, 172, 4);
+        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
     }
 }

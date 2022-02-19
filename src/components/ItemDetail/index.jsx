@@ -5,6 +5,8 @@ import "../ItemDetail/style.css"
 import cargando from  "../../assets/cargando.gif";
 import { CartContext, useCart } from "../../context/cartContext"
 import { getFirestore } from "../../firebase";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetails = () =>{
     const {addItem}= useCart()
@@ -14,7 +16,16 @@ const ItemDetails = () =>{
     const [error,setError]=useState(null)
     const [isLoading,setIsLoading] = useState(false)
     const navigate = useNavigate()
-    
+    const notify = () => toast.success("Producto agregado!", {
+        position: "bottom-left",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });;
+
     useEffect(() => {
         const db = getFirestore();
         const productosCollection = db.collection('productos')
@@ -29,13 +40,6 @@ const ItemDetails = () =>{
             
         })
         .finally(()=>setIsLoading(false))
-        //Fetch en JSON
-        // const URL = `http://localhost:3001/productos/${productId}`;
-        // setIsLoading(true);
-        // fetch(URL)
-        // .then((res) => res.json())
-        // .then((data) => setProduct(data))
-        // .finally(() => setIsLoading(false));
     },[productId]);
 
     if(isLoading || !product) return <img className="imgCargando" src={cargando}/>;
@@ -49,8 +53,9 @@ const ItemDetails = () =>{
                         <p>{product.detalles}</p>
                         <p className="product__precio">Precio: ${product.precio}</p>
                         <ItemCount contador={contador} setContador={setContador}/>
-                        <button onClick={() =>addItem(product,contador)} className="product__btn btnAgregarAlCarrito">Agregar Al Carrito</button>
+                        <button onClick={()=>{notify();addItem(product,contador)}} className="product__btn btnAgregarAlCarrito">Agregar Al Carrito</button>
                         <button onClick={()=>navigate(`/cart`)} className="product__btn btnFinalizarCompra">Finalizar Compra</button>
+                        <ToastContainer/>
                     </div>
                 </div>
             </div>

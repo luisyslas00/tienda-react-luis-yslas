@@ -1,7 +1,10 @@
+
+
 const HomePage = () => {
+    
     return(
         <div>
-            <h1>Tienda Móvil</h1>
+            <h1>¡Compra tu celular en nuestra online!</h1>
         </div>
     )
 }

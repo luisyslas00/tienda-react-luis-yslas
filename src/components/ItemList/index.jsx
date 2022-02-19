@@ -34,14 +34,6 @@ function ItemList(){
             }
         }
         getDataFromFirestore()
-        
-        //Fetch con el JSON 
-        // setIsLoading(true);
-        // fetch(JSONURL)
-        // .then((response)=>response.json())
-        // .then((json) => setProducts(json))
-        // .catch((err)=>setError(err))
-        // .finally(()=>setIsLoading(false))
     },[]);
     if(isLoading){
         return(
