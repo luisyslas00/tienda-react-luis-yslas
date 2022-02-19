@@ -77,7 +77,7 @@ const CartPage = () => {
                         <h2>Complete con sus datos</h2>
                         <form className="formulario" onSubmit={handleSubmit}>
                             <label htmlFor="name">Nombre y Apellido</label>
-                            <input id="name" type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)} />
+                            <input id="name" type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)}/>
                             <label htmlFor="phone">Telefono</label>
                             <input id="phone" type="number" phone="phone" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
                             <label htmlFor="mail">Correo electrónico</label>

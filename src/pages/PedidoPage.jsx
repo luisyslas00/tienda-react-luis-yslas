@@ -36,7 +36,7 @@ const PedidoPage = () => {
         }
         return (
             <div>
-                <h1>Gracias por su compra, sr/sra. {order.buyer.name}</h1>
+                <h1>Gracias por su compra, {order.buyer.name}</h1>
                 <p>Le comunicaremos dentro de las próximas 48hs, con los datos asignados:</p>
                 <p>Teléfono: {order.buyer.phone}</p>
                 <p>Correo Electrónico: {order.buyer.mail}</p>

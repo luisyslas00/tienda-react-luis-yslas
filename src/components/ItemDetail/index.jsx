@@ -17,7 +17,7 @@ const ItemDetails = () =>{
     const [isLoading,setIsLoading] = useState(false)
     const navigate = useNavigate()
     const notify = () => toast.success("Producto agregado!", {
-        position: "bottom-left",
+        position: "bottom-right",
         autoClose: 1500,
         hideProgressBar: false,
         closeOnClick: true,
