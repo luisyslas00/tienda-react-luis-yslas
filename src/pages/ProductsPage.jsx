@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ItemListContainer from "../components/ItemListContainer";
 import appleLogo from "../../src/assets/applelogo.png"
 import samsungLogo from "../../src/assets/samsunglogo.png"
@@ -7,8 +7,8 @@ import tclLogo from "../../src/assets/tcllogo.png"
 
 const ProductsPage = () => {
     return(
-        <div>
-            <h1>Productos</h1>
+        <>
+            <h1 className="tituloPage">Productos</h1>
             <div className="categoryProducts">
                     <Link to='/products'><p className="todosCategory">Todos</p></Link>
                     <Link to='/category/motorola'><img className="imgLogoMarca" src={motorolaLogo}/></Link>
@@ -17,7 +17,7 @@ const ProductsPage = () => {
                     <Link to='/category/tcl'><img className="imgLogoMarca" src={tclLogo}/></Link>
                 </div>
             <ItemListContainer/>
-        </div>
+        </>
     )
 }
 

@@ -55,7 +55,7 @@ function CategoryPage(){
     // }else{
         return(
             <>
-                <h1>Productos</h1>
+                <h1 className="tituloPage">Productos</h1>
                 <div className="categoryProducts">
                     <Link to='/products'><p className="todosCategory">Todos</p></Link>
                     <Link to='/category/motorola'><img className="imgLogoMarca" src={motorolaLogo}/></Link>

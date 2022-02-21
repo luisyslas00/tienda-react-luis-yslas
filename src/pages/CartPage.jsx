@@ -49,6 +49,7 @@ const CartPage = () => {
         const ordersCollection = db.collection("orders");
         const response = await ordersCollection.add(newOrder);
         navigate(`/pedidoexitoso/${response.id}`);
+        clearAll()
     }
 
         return(
@@ -56,7 +57,7 @@ const CartPage = () => {
                 <div className="contenedorCarrito">
                     <div className="contenedorItems">
                         <h1>Carrito</h1>
-                        {cart.length === 0 ? <h3>No Hay productos en el carrito</h3> :null}
+                        {cart.length === 0 ? <h3>No hay productos en el carrito</h3> :null}
                         {cart.map((compra)=>{
                             const totalPrecioProducto = compra.precio*compra.cantidad 
                             return (

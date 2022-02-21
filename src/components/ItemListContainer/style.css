@@ -4,6 +4,289 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+/*HomePage*/
+.contenedorHomePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloPage{
+    text-align: center;
+}
+
+a .imgTienda{
+    width: 100%;
+    margin: 5px auto;
+}
+
+/*About Page*/
+.contenedorAboutPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorAboutPage .contenedorAboutPage__contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorAboutPage .contenedorAboutPage__contenido img{
+    width: 70%;
+}
+
+/*Products Page*/
+.categoryProducts{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.categoryProducts a{
+    height: 50px;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    border: 1px grey solid;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.categoryProducts a .todosCategory{
+    text-transform: uppercase;
+}
+
+.categoryProducts a .imgLogoMarca{
+    height: 100%;
+    width: auto;
+}
+
+/*Contact Page*/
+
+.contenedorContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formularioContacto{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 50%;
+    padding: 1em;
+}
+.contenedorContacto .formularioContacto #nombre{
+    background-color: white;
+    border: 3px solid transparent;
+    line-height: 20px;
+    transition: .3s ease all;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.contenedorContacto .formularioContacto #nombre:focus{
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+    border: 3px solid rgb(32, 199, 32);
+}
+.contenedorContacto .formularioContacto #correo{
+    background-color: white;
+    border: 3px solid transparent;
+    line-height: 20px;
+    transition: .3s ease all;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.contenedorContacto .formularioContacto #correo:focus{
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+    border: 3px solid rgb(32, 199, 32);
+}
+.contenedorContacto .formularioContacto #telefono{
+    background-color: white;
+    border: 3px solid transparent;
+    line-height: 20px;
+    transition: .3s ease all;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.contenedorContacto .formularioContacto #telefono:focus{
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+    border: 3px solid rgb(32, 199, 32);
+}
+.contenedorContacto .formularioContacto .btnEnviar{
+    background-color: rgb(135, 224, 0);
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 1em;
+    cursor: pointer;
+}
+.contenedorContacto .formularioContacto .btnEnviar:hover{
+    background-color: rgb(91, 150, 3);
+}
+.contenedorContacto .formularioContacto .btnEnviar:active{
+    background-color: rgb(105, 172, 4);
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    background-color: white;
+    border: 3px solid transparent;
+    line-height: 20px;
+    transition: .3s ease all;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 1em 0;
+}
+textarea:focus{
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+    border: 3px solid rgb(32, 199, 32);
+}
+
+/*CARRITO*/
+.contenedorCarrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+.contenedorCarrito .contenedorItems{
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+}
+.contenedorCarrito .contenedorItems .contenedorProductoCarrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid lightblue;
+    color: black;
+    padding: 0.5em;
+}
+.contenedorCarrito .contenedorItems .contenedorProductoCarrito .btnEliminar{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+}
+.contenedorCarrito .contenedorItems .contenedorProductoCarrito .btnEliminar:active{
+    background-color: rgb(209, 3, 3);
+}
+.btnVaciar{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+}
+.btnVaciar:hover{
+    background-color: rgb(204, 0, 0);
+}
+.btnVaciar:active{
+    background-color: rgb(128, 1, 1);
+    color: white;
+}
+.contenedorCarrito .contenedorFormulario{
+    width: 100%;
+    padding: 1em;
+}
+.contenedorCarrito .contenedorFormulario .formulario{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    padding: 1em; 
+}
+.contenedorCarrito .contenedorFormulario .formulario #name{
+    background-color: white;
+    border: 3px solid transparent;
+    line-height: 20px;
+    transition: .3s ease all;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.contenedorCarrito .contenedorFormulario .formulario #name:focus{
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+    border: 3px solid lightblue;
+}
+.contenedorCarrito .contenedorFormulario .formulario #mail{
+    background-color: white;
+    border: 3px solid transparent;
+    line-height: 20px;
+    transition: .3s ease all;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.contenedorCarrito .contenedorFormulario .formulario #mail:focus{
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+    border: 3px solid lightblue;
+}
+.contenedorCarrito .contenedorFormulario .formulario #phone{
+    background-color: white;
+    border: 3px solid transparent;
+    line-height: 20px;
+    transition: .3s ease all;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.contenedorCarrito .contenedorFormulario .formulario #phone:focus{
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+    border: 3px solid lightblue;
+}
+.contenedorCarrito .contenedorFormulario .formulario .btnEnviar{
+    background-color: rgb(135, 224, 0);
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 1em;
+    cursor: pointer;
+}
+.contenedorCarrito .contenedorFormulario .formulario .btnEnviar:hover{
+    background-color: rgb(91, 150, 3);
+}
+.contenedorCarrito .contenedorFormulario .formulario .btnEnviar:active{
+    background-color: rgb(105, 172, 4);
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+}
+
+/*Pedido Page*/
+.contenedorPedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lavender;
+    width: 80%;
+    margin: 10px auto;
+    padding: 1em;
+    text-align: center;
+}
 
 @media  screen and (min-width: 768px) {
     .categoryProducts{
@@ -75,75 +358,5 @@
     .btnVaciar:active{
         background-color: rgb(128, 1, 1);
         color: white;
-    }
-    
-    .contenedorCarrito .contenedorFormulario{
-        width: 100%;
-        padding: 1em;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario{
-        background-color: lightblue;
-        display: flex;
-        flex-direction: column;
-        padding: 1em; 
-    }
-    .contenedorCarrito .contenedorFormulario .formulario #name{
-        background-color: white;
-        border: 3px solid transparent;
-        line-height: 20px;
-        transition: .3s ease all;
-        padding: 3px;
-        border-radius: 5px;
-        margin-bottom: 1em;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario #name:focus{
-        outline: none;
-        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
-        border: 3px solid lightblue;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario #mail{
-        background-color: white;
-        border: 3px solid transparent;
-        line-height: 20px;
-        transition: .3s ease all;
-        padding: 3px;
-        border-radius: 5px;
-        margin-bottom: 1em;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario #mail:focus{
-        outline: none;
-        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
-        border: 3px solid lightblue;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario #phone{
-        background-color: white;
-        border: 3px solid transparent;
-        line-height: 20px;
-        transition: .3s ease all;
-        padding: 3px;
-        border-radius: 5px;
-        margin-bottom: 1em;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario #phone:focus{
-        outline: none;
-        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
-        border: 3px solid lightblue;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario .btnEnviar{
-        background-color: rgb(135, 224, 0);
-        padding: 1em;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        text-transform: uppercase;
-        margin-top: 1em;
-        cursor: pointer;
-    }
-    .contenedorCarrito .contenedorFormulario .formulario .btnEnviar:hover{
-        background-color: rgb(91, 150, 3);
-    }
-    .contenedorCarrito .contenedorFormulario .formulario .btnEnviar:active{
-        background-color: rgb(105, 172, 4);
-        box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
     }
 }

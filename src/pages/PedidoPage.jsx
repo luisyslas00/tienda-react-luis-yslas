@@ -35,9 +35,9 @@ const PedidoPage = () => {
             return <p>Cargando...</p>;
         }
         return (
-            <div>
+            <div className="contenedorPedido">
                 <h1>Gracias por su compra, {order.buyer.name}</h1>
-                <p>Le comunicaremos dentro de las próximas 48hs, con los datos asignados:</p>
+                <p>Lo contactaremos dentro de las próximas 48hs, con los datos asignados:</p>
                 <p>Teléfono: {order.buyer.phone}</p>
                 <p>Correo Electrónico: {order.buyer.mail}</p>
                 <h2>Detalle de su compra:</h2>
