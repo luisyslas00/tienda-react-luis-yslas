@@ -10,7 +10,8 @@ import NotFound from './pages/NotFound';
 import { CartProvider } from './context/cartContext';
 import ItemDetails from './components/ItemDetail';
 import CategoryPage from './pages/CategoryPage';
-import PedidoPage from "./pages/PedidoPage"
+import PedidoPage from "./pages/PedidoPage";
+import ConsultaPage from "./pages/ConsultaPage"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="contact" element={<ContactPage/>}/>
             <Route path="cart" element={<CartPage/>}/>
             <Route path="pedidoexitoso/:orderId" element={<PedidoPage />} />
+            <Route path="consultaenviada/:consultaId" element={<ConsultaPage />} />
           <Route/>
           <Route path='*' element={<NotFound/>}/>
           <Route path="category/:categoryId" element={<CategoryPage/>}/>

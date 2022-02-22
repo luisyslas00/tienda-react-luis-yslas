@@ -57,7 +57,6 @@ a .imgTienda{
     width: 80%;
     display: flex;
     justify-content: center;
-
 }
 
 .categoryProducts a .todosCategory{
@@ -304,10 +303,15 @@ textarea:focus{
         border-radius: 10px;
         text-decoration: none;
         color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 
     .categoryProducts a .todosCategory{
         text-transform: uppercase;
+        height: 100%;
     }
 
     .categoryProducts a .imgLogoMarca{
@@ -325,6 +329,12 @@ textarea:focus{
         width: 100%;
         padding: 1em;
         text-align: center;
+    }
+    .contenedorCarrito .contenedorItems h1{
+        margin: 1em 0;
+    }
+    .contenedorCarrito .contenedorItems h3{
+        margin: 1em 0;
     }
     .contenedorCarrito .contenedorItems .contenedorProductoCarrito{
         display: flex;
@@ -358,5 +368,9 @@ textarea:focus{
     .btnVaciar:active{
         background-color: rgb(128, 1, 1);
         color: white;
+    }
+    
+    .categoryProducts a{
+        border: none;
     }
 }
