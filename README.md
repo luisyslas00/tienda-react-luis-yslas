@@ -3,7 +3,7 @@
 Estoy trabajando en un proyecto de tienda de celulares (ficticio), con sus diferentes páginas (Home, Nosotros, Productos, Contacto, Carrito, además le agregué una en caso de no ser encontrada "Not Found").
 
 ## HomePage
-Es simple, importé imágenes del assets, lo único interactivo es la imagen principal que te direcciona a la página de productos. Usando Link
+Es simple, importé imágenes del assets, lo único interactivo es la imagen principal que te direcciona a la página de productos. Usando `Link`
 
 ## AboutPage
 También simple, tanto HomePage como AboutPage las hice para que el Navbar pueda ser usado, quizás me falta agregarle contenido, pero no era la idea tampoco llenar de cosas que no iba a usar con React.
