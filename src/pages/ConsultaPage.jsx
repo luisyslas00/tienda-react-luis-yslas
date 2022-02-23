@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getFirestore } from "../firebase";
 
 const ConsultaPage = () => {
     const { consultaId } = useParams();
     const [consulta, setConsulta] = useState({});
+    let navigate = useNavigate()
     
     useEffect(() => {
         const db = getFirestore();
@@ -19,8 +20,12 @@ const ConsultaPage = () => {
         }
         return (
             <div className="contenedorConsulta">
-                <h1>{consulta.cliente.nombre}, su consulta fue enviada exitosamente!</h1>
-                <p>Lo contactaremos dentro de las próximas 48hs</p>
+                <div className="contenedorConsultaGlobo">
+                    <p>{consulta.cliente.nombre}, su consulta fue enviada exitosamente!</p>
+                    <p>Lo contactaremos dentro de las próximas 48hs.</p>
+                    <p>Gracias!</p>
+                </div>
+                <button onClick={()=>navigate(`/`)} className="btnVolver">Volver a la Home</button>
             </div>
         );
 }

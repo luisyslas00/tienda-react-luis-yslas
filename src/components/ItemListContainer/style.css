@@ -14,11 +14,33 @@
 
 .tituloPage{
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1em;
 }
 
 a .imgTienda{
     width: 100%;
     margin: 5px auto;
+}
+.contenedorMarcas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedorMarcas .contenedorMarcas__imagen{
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorMarcas .contenedorMarcas__imagen img{
+   width: auto;
+   height: 100%;
 }
 
 /*About Page*/
@@ -32,10 +54,18 @@ a .imgTienda{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid rgb(116, 93, 250);
+    background-color: rgb(177, 165, 250);
+    margin: 1em;
+    border-radius: 10px;
+    color: white;
 }
 
 .contenedorAboutPage .contenedorAboutPage__contenido img{
     width: 70%;
+    margin: 1em;
 }
 
 /*Products Page*/
@@ -57,10 +87,12 @@ a .imgTienda{
     width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .categoryProducts a .todosCategory{
     text-transform: uppercase;
+    margin: auto 0;
 }
 
 .categoryProducts a .imgLogoMarca{
@@ -166,12 +198,17 @@ textarea:focus{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px;
 }
 .contenedorCarrito .contenedorItems{
     width: 100%;
-    padding: 1em;
     text-align: center;
+    margin: 1em;
+}
+.contenedorCarrito .contenedorItems h1{
+    margin: 1em 0;
+}
+.contenedorCarrito .contenedorItems h3{
+    margin: 1em 0;
 }
 .contenedorCarrito .contenedorItems .contenedorProductoCarrito{
     display: flex;
@@ -180,6 +217,10 @@ textarea:focus{
     border-bottom: 1px solid lightblue;
     color: black;
     padding: 0.5em;
+}
+
+.contenedorCarrito .contenedorItems .contenedorProductoCarrito p{
+    margin: 1em;
 }
 .contenedorCarrito .contenedorItems .contenedorProductoCarrito .btnEliminar{
     border: none;
@@ -207,7 +248,10 @@ textarea:focus{
 }
 .contenedorCarrito .contenedorFormulario{
     width: 100%;
-    padding: 1em;
+}
+.contenedorCarrito .contenedorFormulario h2{
+    margin: 1em;
+    text-align: center;
 }
 .contenedorCarrito .contenedorFormulario .formulario{
     background-color: lightblue;
@@ -287,7 +331,70 @@ textarea:focus{
     text-align: center;
 }
 
+.contenedorPedido p{
+    margin: 0.5em 0;
+}
+
+.productoPedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.productoPedido p{
+    margin: 1em;
+}
+
+/*ConsultaPage*/
+
+.contenedorConsulta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.contenedorConsultaGlobo{
+    border: 3px solid greenyellow;
+    color: rgb(137, 177, 78);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1em;
+    text-align: center;
+}
+
+.btnVolver{
+    border: none;
+    padding: 1em;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.btnVolver:hover{
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+}
+
 @media  screen and (min-width: 768px) {
+    /*HomePage*/
+    .contenedorMarcas{
+        display: flex;
+        flex-direction: row;
+    }
+    /*AboutPage*/
+    .contenedorAboutPage .contenedorAboutPage__contenido{
+        display: flex;
+        flex-direction: row;
+    }
+    /*ProductsPage*/
     .categoryProducts{
         display:flex;
         flex-direction: row;
@@ -311,7 +418,6 @@ textarea:focus{
 
     .categoryProducts a .todosCategory{
         text-transform: uppercase;
-        height: 100%;
     }
 
     .categoryProducts a .imgLogoMarca{
@@ -345,6 +451,9 @@ textarea:focus{
         color: black;
         padding: 0.5em;
     }
+    .contenedorCarrito .contenedorItems .contenedorProductoCarrito p{
+        margin: 1em 5px;
+    }
     .contenedorCarrito .contenedorItems .contenedorProductoCarrito .btnEliminar{
         border: none;
         background-color: red;
@@ -372,5 +481,11 @@ textarea:focus{
     
     .categoryProducts a{
         border: none;
+    }
+    /*PedidoPage*/
+    .productoPedido{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }

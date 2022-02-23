@@ -5,6 +5,11 @@
     background-color: white;
     cursor: pointer;
     border-radius: 50%;
+    margin: 10px;
+}
+
+.botonCarrito:hover{
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
 }
 
 .botonCarrito a{

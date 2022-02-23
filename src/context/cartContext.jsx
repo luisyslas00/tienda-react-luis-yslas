@@ -4,7 +4,7 @@ export const CartContext = createContext([]);
 
 export const CartProvider = ({children}) => {
     const [cart,setCart] = useState([]);
-    
+    //Agregar al carrito
     const addItem = (item,quantity) =>{
         const newCart = {...item, cantidad: quantity,};
         const IsInCart = (idItem)=>{
@@ -24,18 +24,19 @@ export const CartProvider = ({children}) => {
             setCart(newCarts);
         }
     }
-
+    //Eliminar del carrito
     const deleteItem = (id) => {
         setCart((prev)=>prev.filter((element)=>element.id!==id));
     }; 
-
+    //Vaciar carrito
     const clearAll = () => {
         setCart([]);
     };
+    //Total productos
     const totalQty = () => {      
         return cart.reduce((contador,product) =>  contador +  product.cantidad, 0 ) 
     }
-
+    //Precio Total
     const precioTotal = () =>{
         let total = 0;
         cart.forEach((item)=>{

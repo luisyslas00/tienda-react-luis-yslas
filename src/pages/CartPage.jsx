@@ -7,6 +7,7 @@ import { getFirestore } from "../firebase";
 const CartPage = () => {
     const {cart ,deleteItem,clearAll,precioTotal} = useContext(CartContext);
     let navigate = useNavigate()
+    //Notificación
     const notify = () => toast.warn('Complete el formulario!', {
         position: "top-right",
         autoClose: 1500,
@@ -29,7 +30,7 @@ const CartPage = () => {
     const [name,setName] = useState("")
     const [phone,setPhone] = useState("")
     const [mail,setMail] = useState("")
-
+    //Envio de formulario
     const handleSubmit = async (evt) =>{
         evt.preventDefault()
         if(!name || !phone || !mail){
@@ -65,7 +66,7 @@ const CartPage = () => {
                                     <p>{compra.nombre}</p>
                                     <img src={compra.imagen} alt={compra.nombre}/>
                                     <p>${compra.precio}</p>
-                                    <p>Cantidad: {compra.cantidad}</p>
+                                    <p>x{compra.cantidad}</p>
                                     <p>${totalPrecioProducto}</p>
                                     <button className="btnEliminar" onClick={()=>deleteItem(compra.id)}>Eliminar</button>
                                 </div>

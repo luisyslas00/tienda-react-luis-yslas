@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import ItemCount from "../ItemCount"
 import "../ItemDetail/style.css"
 import cargando from  "../../assets/cargando.gif";
-import { CartContext, useCart } from "../../context/cartContext"
+import { useCart } from "../../context/cartContext"
 import { getFirestore } from "../../firebase";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,9 +13,9 @@ const ItemDetails = () =>{
     const [contador,setContador] = useState(0);
     const {productId}= useParams()
     const [product,setProduct] = useState()
-    const [error,setError]=useState(null)
     const [isLoading,setIsLoading] = useState(false)
     const navigate = useNavigate()
+    //Función Toastify
     const notify = () => toast.success("Producto agregado!", {
         position: "bottom-right",
         autoClose: 1500,
@@ -25,6 +25,10 @@ const ItemDetails = () =>{
         draggable: true,
         progress: undefined,
     });;
+    //Función resetear contador
+    const resetClick = () => {
+      setContador(0);
+    };
 
     useEffect(() => {
         const db = getFirestore();
@@ -32,10 +36,6 @@ const ItemDetails = () =>{
         const productoElegido = productosCollection.doc(productId)
         setIsLoading(true)
         productoElegido.get().then((response)=>{
-            //Para comprobar si el producto existe
-            // if(!response.exits){
-            //     console.log("El producto no existe")
-            // }
             setProduct({...response.data(),id: response.id})
             
         })
@@ -52,9 +52,12 @@ const ItemDetails = () =>{
                     <div className="itemContainer__details--desc">
                         <p>{product.detalles}</p>
                         <p className="product__precio">Precio: ${product.precio}</p>
+                        <p>Cantidad</p>
                         <ItemCount contador={contador} setContador={setContador}/>
-                        <button onClick={()=>{notify();addItem(product,contador)}} className="product__btn btnAgregarAlCarrito">Agregar Al Carrito</button>
-                        <button onClick={()=>navigate(`/cart`)} className="product__btn btnFinalizarCompra">Finalizar Compra</button>
+                        <div className="contenedorBtnCompra">
+                            <button onClick={()=>{notify();addItem(product,contador);resetClick()}} className="product__btn btnAgregarAlCarrito">Agregar Al Carrito</button>
+                            <button onClick={()=>navigate(`/cart`)} className="product__btn btnFinalizarCompra">Finalizar Compra</button>
+                        </div>
                         <ToastContainer/>
                     </div>
                 </div>

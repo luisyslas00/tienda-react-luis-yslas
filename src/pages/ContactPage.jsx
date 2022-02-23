@@ -10,7 +10,7 @@ const ContactPage = () => {
     const [correo,setCorreo] = useState("")
     const [consulta,setConsulta] = useState("")
     let navigate = useNavigate()
-
+    //Notificación
     const notify = () => toast.warn('Complete el formulario!', {
         position: "top-right",
         autoClose: 1500,
@@ -20,7 +20,7 @@ const ContactPage = () => {
         draggable: true,
         progress: undefined,
     });
-
+    //Envio Formulario
     const handleSubmit = async (evt) =>{
         evt.preventDefault()
         if(!nombre || !telefono || !correo || !consulta){
@@ -34,7 +34,6 @@ const ContactPage = () => {
         const consultasCollection = db.collection("consultas");
         const response = await consultasCollection.add(nuevaConsulta);
         navigate(`/consultaenviada/${response.id}`);
-        // clearAll()
     }
     return(
         <div className="contenedorContacto">
