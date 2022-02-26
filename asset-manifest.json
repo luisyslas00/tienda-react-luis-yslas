@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tienda-react-luis-yslas/static/css/main.27040811.css",
+    "main.js": "/tienda-react-luis-yslas/static/js/main.60b24e99.js",
+    "static/js/787.51779f60.chunk.js": "/tienda-react-luis-yslas/static/js/787.51779f60.chunk.js",
+    "static/media/cargando.gif": "/tienda-react-luis-yslas/static/media/cargando.5b4dc683994059e46006.gif",
+    "static/media/tcllogo.png": "/tienda-react-luis-yslas/static/media/tcllogo.2930bc7fe25e91521c7f.png",
+    "static/media/logo.png": "/tienda-react-luis-yslas/static/media/logo.e8ca8bfcec07174b6b44.png",
+    "static/media/tiendalocal.jpg": "/tienda-react-luis-yslas/static/media/tiendalocal.eb9dac750f77becd055f.jpg",
+    "static/media/motorolalogo.png": "/tienda-react-luis-yslas/static/media/motorolalogo.3eb03eacfc4595142c60.png",
+    "static/media/samsunglogo.png": "/tienda-react-luis-yslas/static/media/samsunglogo.973d73cfcbde19ac40a7.png",
+    "static/media/cart-icon.png": "/tienda-react-luis-yslas/static/media/cart-icon.8f558bfc9a321cd604f8.png",
+    "static/media/applelogo.png": "/tienda-react-luis-yslas/static/media/applelogo.0fa90595d614e440a8d9.png",
+    "index.html": "/tienda-react-luis-yslas/index.html",
+    "main.27040811.css.map": "/tienda-react-luis-yslas/static/css/main.27040811.css.map",
+    "main.60b24e99.js.map": "/tienda-react-luis-yslas/static/js/main.60b24e99.js.map",
+    "787.51779f60.chunk.js.map": "/tienda-react-luis-yslas/static/js/787.51779f60.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27040811.css",
+    "static/js/main.60b24e99.js"
+  ]
+}
