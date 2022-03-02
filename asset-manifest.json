@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tienda-react-luis-yslas/static/css/main.27040811.css",
-    "main.js": "/tienda-react-luis-yslas/static/js/main.60b24e99.js",
+    "main.js": "/tienda-react-luis-yslas/static/js/main.14efa2eb.js",
     "static/js/787.51779f60.chunk.js": "/tienda-react-luis-yslas/static/js/787.51779f60.chunk.js",
     "static/media/cargando.gif": "/tienda-react-luis-yslas/static/media/cargando.5b4dc683994059e46006.gif",
     "static/media/tcllogo.png": "/tienda-react-luis-yslas/static/media/tcllogo.2930bc7fe25e91521c7f.png",
@@ -13,11 +13,11 @@
     "static/media/applelogo.png": "/tienda-react-luis-yslas/static/media/applelogo.0fa90595d614e440a8d9.png",
     "index.html": "/tienda-react-luis-yslas/index.html",
     "main.27040811.css.map": "/tienda-react-luis-yslas/static/css/main.27040811.css.map",
-    "main.60b24e99.js.map": "/tienda-react-luis-yslas/static/js/main.60b24e99.js.map",
+    "main.14efa2eb.js.map": "/tienda-react-luis-yslas/static/js/main.14efa2eb.js.map",
     "787.51779f60.chunk.js.map": "/tienda-react-luis-yslas/static/js/787.51779f60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27040811.css",
-    "static/js/main.60b24e99.js"
+    "static/js/main.14efa2eb.js"
   ]
 }
