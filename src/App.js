@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path="/tienda-react-luis-yslas"/>
+          <Route path="/"/>
             <Route index element={<HomePage/>} />
             <Route path="about" element={<AboutPage/>}/>
             <Route path="products">
