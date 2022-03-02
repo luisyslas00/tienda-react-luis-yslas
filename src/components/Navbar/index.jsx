@@ -8,7 +8,7 @@ function Navbar(){
     return(
         <div className="menu">
             <Link to='/'>
-                <img src={logo}/>
+                <img src={logo} alt="tienda celulares"/>
             </Link>
             <ul className="menu__lista">
                 <li><Link to='/'>Home</Link></li>

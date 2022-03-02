@@ -42,13 +42,13 @@ const ItemDetails = () =>{
         .finally(()=>setIsLoading(false))
     },[productId]);
 
-    if(isLoading || !product) return <img className="imgCargando" src={cargando}/>;
+    if(isLoading || !product) return <img className="imgCargando" src={cargando} alt="imagen cargando"/>;
 
         return(
             <div className="itemContainer">
                 <h2>{product.nombre}</h2>
                 <div className="itemContainer__details">
-                <img src={product.imagen}/>
+                <img src={product.imagen} alt={product.nombre}/>
                     <div className="itemContainer__details--desc">
                         <p>{product.detalles}</p>
                         <p className="product__precio">Precio: ${product.precio}</p>

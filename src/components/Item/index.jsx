@@ -6,7 +6,7 @@ import "./style.css"
     return(
         <div className="productContainer">
             <p className="productContainer__nombre">{product.nombre}</p>
-            <img src={product.imagen}/>
+            <img src={product.imagen} alt={product.nombre}/>
             <p className="productContainer__precio">Precio: ${product.precio}</p>
             <button onClick={()=>navigate(`/products/${product.id}`)} className="productContainer__btn">Ver más</button>
         </div>
